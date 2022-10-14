@@ -13,6 +13,43 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/calcs/{fnumber}/{calculation}/{snumber}', [App\Http\Controllers\calcs::class, 'result']);
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/route/hello', function () {
+//     return '<h1>Hello from Route!</h1>';
+// });
+
+// Route::get('/view/hello', function () {
+//     return view('message.hello');
+// });
+
+// Route::get('/view/var', function () {
+//     return view('message.var', ['variable' => 'Hello from web.php']);
+// });
+
+// Route::get('/view/word/{msg}', function ($msg) {
+//     return view('message.word', ['msg' => $msg]);
+// });
+
+// Route::get('/view/word/{name}/{msg}', function ($name, $msg) {
+//     return view('message.word2', [
+//         'name' => $name,
+//         'msg' => $msg
+//     ]);
+// });
+
+// Route::get('/controller/hello', [App\Http\Controllers\MessageController::class, 'hello']);
+
+// Route::get('/controller/var', [App\Http\Controllers\MessageController::class, 'var']);
+
+// Route::get('/controller/word/{msg}', [App\Http\Controllers\MessageController::class, 'word']);
+
+// Route::get('/controller/word/{name}/{msg}', [App\Http\Controllers\MessageController::class, 'word2']);
+
